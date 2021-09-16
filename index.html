@@ -1,86 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Flexbox: Align-Content</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
     <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-
+    <title>My Form</title>
+</head>
 <body>
-    <main>
-        <fieldset>
-            <legend>Contact Form</legend>
-            <div>
-                <label for="name">Full Name:</label>
-                <input 
-                    id="name" 
-                    type="text" 
-                    name="name"
-                    placeholder= "Your name here"
-                    pattern="[A-Za-z]{3}"
-                    required
-                />
-                   
-            </div>
-            <div>
-                <label for="email">Email:</label>
-                <input id="name" 
-                    type="text" 
-                    name="name" 
-                    pattern=".@globex\.com"
-                    size="30" 
-                    required
-                    placeholder="Your password here"
-                />
-            </div>
-            <div>
-                <label for="phone">Phone #:</label>
-                <input 
-                    id="phone"
-                    type="text"
-                    name="phone"
-                    pattern="\d{3}[\-]\d{3}[\-]\d{4}"
-                    placeholder="xxx-xxx-xxxx"
-                />
-            </div>
-            <div>
-                <label for="form-message">Your Message:</label>
-                <textarea 
-                    id= "form-message" 
-                    name="message" 
-                    autofocus="on"
-                    maxlength="200"
-                    placeholder="Type your message here!"></textarea>
-            </div>
-            <h5>Select Primary Contact Method:</h5>
-            <div>
-                <input 
-                id="email"
-                name="email"
-                type="radio"
-                value="email"
-                />
-                <label for="email">Email</label>
-            </div>
-            <div>
-                <input 
-                id="phone"
-                name="phone"
-                type="radio"
-                value="phone"
-                />
-                <label for="phone">Phone</label>
-            </div>
-        </fieldset>
-<br/>
-        <div>
-            <button type="submit">Send Message</button>
-            <button type="reset">Reset Form</button>
-        </div>
-        
+    <!-- modify this form HTML and place wherever you want your form -->
+<form
+action="https://formspree.io/f/xnqllpan"
+method="POST"
+>
+<div class="group">
+    <div class="item">
+        <label for="name">Your name:
+            <input id="name" type="text" name="name">
+        </label>
+    </div>
+    <div class="item">
+        <label for="email">Your email:
+        <input type="email" name="_replyto">
+        </label>
+    </div>
+    <div class="item">
+        <label for="message">Your message:
+        <textarea name="message"></textarea>
+        </label>
+    </div>
+    <!-- your other form fields go here -->
+    <div class="item">
+        <button type="submit">Send</button>
+    </div>
+    <div class="item">
+        <button type="reset">Reset</button>
+    </div>
+</div>
+</form>
+    
+</body>
+</html>
